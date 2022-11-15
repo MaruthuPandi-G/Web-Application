@@ -1,0 +1,145 @@
+﻿@model SubscriberDetail
+
+    @*Content Start*@
+
+    <div class="container-fluid ">
+        <div class="row bg-about p-5">
+            <p class="text-center text-white display-4 mb-3 mt-3">About Us</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1"></div>
+
+            <div class="col-12 col-sm-12 col-md-10">
+                <h3 class="about-heading  mt-5">Our Mission</h3>
+                <p class="about-para mt-4">
+                    Consectetur adipiscing elit, sued do eiusmod tempor ididunt udfgt labore et dolore magna aliqua. Quis ipsum suspendisces gravida. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.
+
+                    Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan.
+                </p>
+
+                <h3 class="about-heading  mt-4">Our Vision</h3>
+                <p class="about-para mt-4">
+                    Consectetur adipiscing elit, sued do eiusmod tempor ididunt udfgt labore et dolore magna aliqua. Quis ipsum suspendisces gravida. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.
+
+                    Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan.
+                </p>
+            </div>
+
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+
+    @*Instructors Content Start*@
+
+    <div class="container-fluid mt-5">
+        <div class="row bg-about  p-5">
+            <p class="text-center text-white display-4 mb-3 mt-3">Instructors</p>
+        </div>
+        <div class="row mt-5">
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="card img-container mb-2">
+                    <img src="~/Images/teacherone.png" class="card-img-top img-fluid" />
+                    <div class="overlay justify-content-lg-between">
+                        <a href="#" class="text-white "><i class="fa fa-facebook fb-hov"></i></a>
+                        <a href="#" class="text-white "><i class="fa fa-twitter tw-hov"></i></a>
+                        <a href="#" class="text-white "><i class="fa fa-instagram in-hov"></i></a>
+                    </div>
+                </div>
+                <h4 class="text-dark text-center">Alexa Janathon</h4>
+                <p class="text-dark text-center opacity-100">Faculty</p>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="card img-container mb-3">
+                    <img src="~/Images/teacherfour.png" class="img-fluid " />
+                    <div class="overlay justify-content-lg-between">
+                        <a href="#" class="text-white "><i class="fa fa-facebook-f  fb-hov"></i></a>
+                        <a href="#" class="text-white "><i class="fa fa-twitter tw-hov"></i></a>
+                        <a href="#" class="text-white "><i class="fa fa-instagram in-hov"></i></a>
+                    </div>
+                </div>
+                <h4 class="text-dark text-center">Janathon Smith</h4>
+                <p class="text-dark text-center opacity-100">Faculty</p>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="card img-container mb-3">
+                    <img src="~/Images/teacherthree.png" class="img-fluid " />
+                    <div class="overlay justify-content-lg-between">
+                        <a href="#" class="text-white "><i class="fa fa-facebook-f  fb-hov"></i></a>
+                        <a href="#" class="text-white "><i class="fa fa-twitter tw-hov"></i></a>
+                        <a href="#" class="text-white "><i class="fa fa-instagram in-hov"></i></a>
+                    </div>
+                </div>
+                <h4 class="text-dark text-center">AlAlexa MacCalum</h4>
+                <p class="text-dark text-center opacity-100">Faculty</p>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="card img-container mb-3">
+                    <img src="~/Images/teachertwo.png" class="img-fluid i" />
+                    <div class="overlay justify-content-lg-between">
+                        <a href="#" class="text-white "><i class="fa fa-facebook-f  fb-hov"></i></a>
+                        <a href="#" class="text-white "><i class="fa fa-twitter tw-hov"></i></a>
+                        <a href="#" class="text-white "><i class="fa fa-instagram in-hov"></i></a>
+                    </div>
+                </div>
+                <h4 class="text-dark text-center">Alexa j Watson</h4>
+                <p class="text-dark text-center opacity-100">Faculty</p>
+            </div>          
+
+        </div>
+
+    </div>
+
+@*Footer Start*@
+
+     <footer class="container-fluid bg-black">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-6 mt-3">
+                    <h4 class="text-light mt-3">Stay Updated</h4>
+                    <div class="mt-4">
+                        <form asp-action="About" asp-controller="User" method="post">
+                       
+                            <div class="input-group ">
+                                <input asp-for="Email" class = "form-control" placeholder = "Enter E-mail" type = "email">
+                               
+                                <span class="input-group-text bg-primary"><button type="submit" class="btn btn-primary">Subscribe Now</button></span>
+
+                            </div>
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        
+                        </form>
+
+                    </div>
+                </div>
+                  <div class="col-md-1"></div>
+
+                <div class="col-md-5 ">
+                    <h4 class="text-light mt-3">Let’s Get Social</h4>
+
+                    <table class="mt-5" width="50%">
+                        <tr class="text-light">
+                            <td><i class="fa fa-facebook fa-2x fb-hov"></i></td>
+                            <td><i class="fa fa-twitter fa-2x tw-hov"></i></td>
+                            <td><i class="fa fa-google fa-2x go-hov"></i></td>
+                            <td><i class="fa fa-instagram fa-2x in-hov"></i></td>
+                            <td><i class="fa fa-youtube-square fa-2x you-hov"></i></td>
+                        </tr>
+                    </table>
+                </div>
+                <hr class="mt-4 text-light" />
+
+                <p class="text-light opacity-50 mt-1 mb-3 text-center">Copyright ©2022 All rights reserved by simpliLearn</p>
+
+            </div>
+
+        </div>
+   
+    </footer>  

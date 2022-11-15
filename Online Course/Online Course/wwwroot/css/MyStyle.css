@@ -1,0 +1,295 @@
+﻿
+
+.icon-color {
+    color: black;
+}
+
+.navitems:hover {
+    color: aliceblue !important;
+}
+
+body {
+    background-image: linear-gradient(to right, #f2fcfe,#f2fcfe );
+}
+
+.img-bg {
+    background-color: rgb(188, 222, 254);
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset !important;
+}
+
+.title {
+    font-size: 65px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #030431;
+    text-align: justify;
+}
+
+.headone {
+    color: #030431;
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: justify;
+}
+
+.card.head {
+    color: #030431;
+    text-align: justify;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.link-text {
+    text-decoration: none;
+    text-align: justify;
+    color: red;
+    font-weight: bold;
+}
+
+    .link-text:hover {
+        color: white;
+        font-size: medium;
+    }
+
+.card-hov:hover {
+    background-color: #2D3092;
+    color: white;
+}
+
+.card-shadow {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.nav-text {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+    .nav-text:hover {
+        color: burlywood;
+    }
+
+.logincard-hov:hover {
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset !important;
+    background-color: dimgray;
+    color: black;
+}
+
+
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.box {
+    background: linear-gradient(to right, #4DA0B0, #D39D38);
+    color: black;
+    --width: 240px;
+    --height: calc(var(--width) / 4);
+    width: var(--width);
+    height: var(--height);
+    text-align: center;
+    line-height: var(--height);
+    font-size: calc(var(--height) / 2.5);
+    font-family: sans-serif;
+    letter-spacing: 0.2em;
+    border: 1px solid white;
+    border-radius: 2em;
+    transform: perspective(500px) rotateY(-15deg);
+    text-shadow: 6px 3px 2px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 2px 0 0 5px rgba(0, 0, 0, 0.2);*/
+    transition: 0.5s;
+    position: relative;
+    overflow: hidden;
+}
+
+    .box:hover {
+        transform: perspective(500px) rotateY(15deg);
+        text-shadow: -6px 3px 2px rgba(0, 0, 0, 0.2);
+        /*        box-shadow: -2px 0 0 5px rgba(0, 0, 0, 0.2);
+*/
+    }
+
+    .box::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, transparent, white, transparent);
+        left: -100%;
+        transition: 0.5s;
+    }
+
+    .box:hover::before {
+        left: 100%;
+    }
+
+.bg {
+    background-color: aliceblue;
+}
+
+#numberValue {
+    font: 800 40px system-ui;
+}
+
+.text-font {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: navy;
+}
+
+
+/*satff hover images*/
+
+.staff-bg {
+    background-color: #2D3092;
+}
+
+.img-container {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
+}
+
+/*.image {
+    display: block;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}*/
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1;
+    width: 100%;
+    transition: .5s ease;
+    opacity: 0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.img-container:hover .overlay {
+    opacity: 1;
+}
+
+.fb-hov:hover {
+    color: #1b6bdc;
+}
+
+.tw-hov:hover {
+    color: #1DA1F2;
+}
+
+.in-hov:hover {
+    color: darkviolet;
+}
+
+.go-hov:hover {
+    color: #004bff
+}
+
+.you-hov:hover {
+    color: red;
+}
+
+.footer {
+    background-color: #000000;
+}
+
+
+/*About Page*/
+
+.bg-about {
+    background-color: #2A2C7F;
+}
+
+.about-heading {
+    color: navy;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.about-para {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    word-spacing: 10px;
+}
+
+.text-head {
+    color: #030431;
+}
+
+.address {
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.answer{
+    display:none;
+    padding:10px;
+}
+.submitans {
+    display: none;
+    padding: 10px;
+}
+
+
+
+
+
+/* Blog Button */
+.button-71 {
+    background-color: red;
+    border: 0;
+    border-radius: 56px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    outline: 0;
+    padding: 16px 21px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+    .button-71:before {
+        background-color: initial;
+        background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+        border-radius: 125px;
+        content: "";
+        height: 50%;
+        left: 4%;
+        opacity: .5;
+        position: absolute;
+        top: 0;
+        transition: all .3s;
+        width: 92%;
+    }
+
+    .button-71:hover {
+        box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+        transform: scale(1.05);
+    }
+
+@media (min-width: 768px) {
+    .button-71 {
+        padding: 16px 48px;
+    }
+}

@@ -1,0 +1,92 @@
+﻿
+@model RegisterValidationModel
+
+@{
+    Layout = "~/Views/Shared/_UserRegisterLayout.cshtml";
+}
+
+    <div class="row container">
+        <div class="col-0 col-sm-3 col-md-4"></div>
+
+        <div class="col-12 col-sm-9 col-md-7">
+            <div class="card  bg-transparent bg-gradient mt-3 mb-3" >
+                <div class="card-header"><h3 class="text-center display-5">Create Your Account!</h3></div>
+                <div class="card-body">
+
+                    <form asp-action="Register" asp-controller="User" method="post">
+                         <div class="mb-3 mt-3">
+                            <label for="username" class="form-label fw-bold">Name:</label>
+                            <input type="text" asp-for="Name" class="form-control" placeholder = "Enter name" />
+                            <span asp-validation-for="Name" class = "text-danger"></span>
+                        </div>
+
+                        <div class="mb-2">
+                            <label for="gender" class="form-label fw-bold ">Gender:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input asp-for="Gender" type="radio" name="gender" value="Male" class="form-check-input" /> Male &nbsp;&nbsp;&nbsp; 
+                            <input asp-for="Gender" type="radio" name="gender" value="Female" class="form-check-input" /> Female                          
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-bold ">Email:</label>
+                            <input type="email" asp-for="Email" class="form-control" placeholder = "Enter Email" />
+                            <span asp-validation-for="Email" class = "text-danger"></span>                           
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="password" class="form-label fw-bold">PassWord:</label>
+                            <input type="password" asp-for="Password" class="form-control" placeholder = "Enter Password" />                            
+                            <div class="row">
+                                <span asp-validation-for="Password" class = "text-danger col-md-5"></span>  
+                                <label class="text-primary fw-bold col-md-7">Format:Aa..(one spl char)12..</label>
+                            </div>
+                            
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Confirm PassWord:</label>
+                            <input type="password" asp-for="ConfirmPassword" class="form-control" placeholder = "Enter Confirm Password" />                            
+                            <div class="row">
+                                <span asp-validation-for="ConfirmPassword" class = "text-danger col-md-5"></span>  
+                                <label class="text-primary fw-bold col-md-7">Format:Aa..(one spl char)12..</label>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="text-danger text-center">@ViewBag.Message</p>
+                        </div>
+                       @* @if(ViewBag.Message=="Success")
+                        {
+                            <!-- Modal -->
+                        <div class="modal fade" id="myModal" role="dialog">
+                            <div class="modal-dialog">
+    
+                          <!-- Modal content-->
+                                <div class="modal-content">
+                                       <div class="modal-header">          
+                                             <h4 class="modal-title">Welcome @Model.RegisterModel.Name</h4>
+                                       </div>
+                                       <div class="modal-body">
+                                            <p>Your Account has been Created Successfully</p>
+                                       </div>
+                                      <div class="modal-footer">
+                                          <a asp-action="Login" asp-controller="User" class="btn btn-outline-info"></a>                                         
+                                      </div>
+                                    </div>      
+                                 </div>
+                               </div>
+                        }                  *@    
+                        <br />
+
+                        <div class="row">                            
+                            <button type="submit" class="btn btn-outline-primary danger fw-bold">Submit</button>                          
+                        </div>
+
+                    </form>
+                   
+                </div>
+            </div>
+        </div>
+
+        <div class="col-0 col-sm-0 col-md-3"></div>
+    </div>
+

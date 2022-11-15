@@ -1,0 +1,59 @@
+﻿@{
+    Layout = null;
+}
+@model CourseEditModel
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simpliLearn</title>
+
+  @*Bootstrap 5 compiled Java Script*@
+    <script src="~/bootstrap/js/BootstrapJavaScript.js"></script>
+
+    @*Bootstrap 5 compiled Css*@
+    <link href="~/bootstrap/css/BootstrapStyle.css" rel="stylesheet" />
+
+    @*Fontawesome 4.7.0*@
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" ><link />
+
+  
+    @*My Style Sheet*@
+    <link href="~/css/MyStyle.css" rel="stylesheet" />
+
+   <script src="~/jquery/MyScript.js"></script>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body class="container">
+
+   <form enctype="multipart/form-data" asp-action="Update" asp-controller="Admin" method="post">
+        <div class="mb-3 mt-3">
+            <input type="hidden" asp-for="Id"/>
+            <input type="hidden" asp-for="ExistingPhotoPath"/>
+               <label class="form-label fw-bold">Course Name:</label>
+               <input type="text" asp-for="CourseName" class="form-control" value="@Model.CourseName"/>               
+        </div>
+         <div class="mb-3 mt-3">   
+             <label class="form-label fw-bold">Change Image:</label>
+            <div class="custom-file">
+                <input  asp-for="CourseImage" class="form-control custom-file-input" type="file" />               
+            </div>         
+        </div>
+         <div class="mb-3 mt-3">
+               <label class="form-label fw-bold">Course Name:</label>
+               <textarea asp-for="CourseDescription" class = "form-control form-control-md" >@Model.CourseDescription</textarea>
+        </div>
+
+        <button type="submit" class="btn btn-outline-primary">Update</button>
+
+
+   </form>
+    
+</body>
+</html>

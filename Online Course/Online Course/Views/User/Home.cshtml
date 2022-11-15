@@ -1,0 +1,348 @@
+@model SubscriberDetail 
+
+
+@*Home Image*@
+    <div class="container img-bg">
+        <div class="row">
+            <div class="col-md-6">
+                <p class="text-primary opacity-100 text-center mt-5">Popular Online Courses</p>
+
+                <h1 class="text-center title mt-5">The New Way To Learn Properly In With Us!</h1>
+
+                <div class="text-center mt-5 "> <a href="Home/Login" class="btn btn-outline-primary">Get Started!</a></div>
+            </div>
+            <div class="col-md-6">
+                <img src="~/Images/firstimage.png" class="img-fluid" />
+            </div>
+        </div>
+    </div>
+    @*Home Browsing Contents Cards*@
+
+    <div class="container">
+        <h1 class="headone text-center mt-5">Lets Brows All Catagori</h1>
+        <div class="row mt-5">
+            <div class="col-sm-6 col-md-4">
+                <div class="card mb-3 card-hov  card-shadow">
+                    <div class="card-body">
+                        <img src="~/Images/web-design.png" class="img-fluid mt-2" />
+                        <h4 class="mt-2 mb-2">Web design</h4>
+                        <p class="mt-2">Sorem hpsum folor sixdsft amhtget, consectetur adipiscing eliht, sed do eiusmod tempor incidi.</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a asp-action="Courses" asp-controller="User" class="link-text">Read More</a>  
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+                <div class="card mb-3 card-hov  card-shadow">
+                    <div class="card-body">
+                        <img src="~/Images/applications.png" class="img-fluid mt-2" />
+                        <h4 class="mt-2 mb-2">App Development</h4>
+                        <p class="mt-2">Sorem hpsum folor sixdsft amhtget, consectetur adipiscing eliht, sed do eiusmod tempor incidi.</p>
+                    </div>
+                    <div class="card-footer text-center">
+                         <a asp-action="Courses" asp-controller="User" class="link-text">Read More</a>  
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 ">
+                <div class="card mb-3 card-hov  card-shadow">
+                    <div class="card-body">
+                        <img src="~/Images/montage.png" class="img-fluid mt-2" />
+                        <h4 class="mt-2 mb-2">Video Editing</h4>
+                        <p class="mt-2">Sorem hpsum folor sixdsft amhtget, consectetur adipiscing eliht, sed do eiusmod tempor incidi.</p>
+                    </div>
+                    <div class="card-footer text-center">
+                         <a asp-action="Courses" asp-controller="User" class="link-text">Read More</a>  
+                    </div>
+                </div>
+            </div>
+           
+
+            <div class="col-sm-6 col-md-4">
+                <div class="card mb-3 mt-3 card-hov  card-shadow">
+                    <div class="card-body">
+                        <img src="~/Images/statistics.png" class="img-fluid mt-2" />
+                        <h4 class="mt-2 mb-2">Digital Marketing</h4>
+                        <p class="mt-2">Sorem hpsum folor sixdsft amhtget, consectetur adipiscing eliht, sed do eiusmod tempor incidi.</p>
+                    </div>
+                    <div class="card-footer text-center">
+                         <a asp-action="Courses" asp-controller="User" class="link-text">Read More</a>  
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+                <div class="card mb-3 mt-3 card-hov  card-shadow">
+                    <div class="card-body">
+                        <img src="~/Images/notepad.png" class="img-fluid mt-2" />
+                        <h4 class="mt-2 mb-2">Seo Marketing</h4>
+                        <p class="mt-2">Sorem hpsum folor sixdsft amhtget, consectetur adipiscing eliht, sed do eiusmod tempor incidi.</p>
+                    </div>
+                    <div class="card-footer text-center">
+                         <a asp-action="Courses" asp-controller="User" class="link-text">Read More</a>  
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 ">
+                <div class="card mb-3 mt-3 card-hov  card-shadow">
+                    <div class="card-body">
+                        <img src="~/Images/light-bulb.png" class="img-fluid mt-2" />
+                        <h4 class="mt-2 mb-2">Content Writing</h4>
+                        <p class="mt-2">Sorem hpsum folor sixdsft amhtget, consectetur adipiscing eliht, sed do eiusmod tempor incidi.</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a asp-action="Courses" asp-controller="User" class="link-text">Read More</a>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        @*<div class="row"><span class="text-center">@Html.ActionLink("Find More!", "", "First", new { @class = "box" })</span></div>*@
+        <div class="row mt-2">
+        <span class="col-md-12 col-sm-12 col-12 text-center">
+            <a asp-action="Courses" asp-controller="User"><button class="box">Find More!</button></a>
+            </span>
+        </div>
+        <br />
+
+
+
+        @*<div class="container-fluid row bg">
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="~/Images/checklist.png" />
+                            <div id="numberValue">100</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <img src="~/Images/teacher.png" />
+                </div>
+                <div class="col-md-3">
+                    <img src="~/Images/working.png" />
+                </div>
+                <div class="col-md-3">
+
+                </div>
+            </div>*@
+
+
+
+
+        <div class="text-font">
+            <p class="text-primary text-center">Most Popular Course Of This Week</p>
+            <h3 class="text-primary text-center display-4">Our Popular Courses</h3>
+        </div>
+
+        <div class="row mt-4 card-group mb-5">
+            <div class="col-sm-6 col-md-4">
+                <div class="card mb-3">
+                    <img src="~/Images/graphicDesign.png" class="card-img-top ca-im" />
+                    <div class="card-body">
+                        <h4 class="card-title text-primary mt-3 display-6">Web Design</h4>
+                        <div class="row mt-3">
+
+                            <div class="col-md-5">
+                                <div>
+                                    <span><i class="fa fa-star text-warning"></i></span>
+                                    <span><i class="fa fa-star text-warning"></i></span>
+                                    <span><i class="fa fa-star text-warning"></i></span>
+                                    <span><i class="fa fa-star text-warning"></i></span>
+                                    <span><i class="fa fa-star text-warning"></i></span>
+                                </div>
+                                <div class="mt-4 mb-2">
+                                    <span><i class="fa fa-user-o mx-1"></i><span class="text-secondary opacity-50">562</span></span>
+                                    <span><i class="fa fa-heart-o mx-1"></i><span class="text-secondary opacity-50">562</span></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3"></div>
+                            <div class="col-md-4">
+                                <p class="text-secondary opacity-100">52 reviews</p>
+                                <p class="text-secondary opacity-100">Free</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+                <div class="card mb-3">
+                    <img src="~/Images/webdevelopment.png" class="card-img-top" />
+                    <div class="card-body">
+                        <h4 class="card-title text-primary mt-3 display-6">App Development</h4>
+                        <div class="row mt-3">
+
+                            <div class="col-md-5">
+                                <div>
+                                    <span><i class="fa fa-star text-warning"></i></span>
+                                    <span><i class="fa fa-star text-warning"></i></span>
+                                    <span><i class="fa fa-star text-warning"></i></span>
+                                    <span><i class="fa fa-star text-warning"></i></span>
+                                    <span><i class="fa fa-star text-warning"></i></span>
+                                </div>
+                                <div class="mt-4 mb-2">
+                                    <span><i class="fa fa-user-o mx-1"></i><span class="text-secondary opacity-50">562</span></span>
+                                    <span><i class="fa fa-heart-o mx-1"></i><span class="text-secondary opacity-50">562</span></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3"></div>
+                            <div class="col-md-4">
+                                <p class="text-secondary opacity-100">52 reviews</p>
+                                <p class="text-secondary opacity-100">Free</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+                <div class="card mb-3">
+                    <img src="~/Images/digitalmarketting.png" class="card-img-top" />
+                    <div class="card-body">
+                        <h4 class="card-title text-primary mt-3 display-6">Digital Marketing</h4>
+                        <div class="row mt-3">
+
+                            <div class="col-md-5">
+                                <div>
+                                    <span><i class="fa fa-star text-warning"></i></span>
+                                    <span><i class="fa fa-star text-warning"></i></span>
+                                    <span><i class="fa fa-star text-warning"></i></span>
+                                    <span><i class="fa fa-star text-warning"></i></span>
+                                    <span><i class="fa fa-star text-warning"></i></span>
+                                </div>
+                                <div class="mt-4 mb-2">
+                                    <span><i class="fa fa-user-o mx-1"></i><span class="text-secondary opacity-50">562</span></span>
+                                    <span><i class="fa fa-heart-o mx-1"></i><span class="text-secondary opacity-50">562</span></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3"></div>
+                            <div class="col-md-4">
+                                <p class="text-secondary opacity-100">52 reviews</p>
+                                <p class="text-secondary opacity-100">Free</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container-fluid">
+        <div class="row staff-bg p-lg-5">
+            <p class="text-primary fw-bold text-center">More About Our Faculty</p>
+            <p class="text-light  display-5 text-center ">Our Best Teachers</p>
+            <div class="col-12 col-sm-6 col-md-3 ">
+                <div class="card img-container mb-2">
+                    <img src="~/Images/teacherone.png" class="img-fluid" />
+                    <div class="overlay justify-content-lg-between">
+                        <a href="#" class="text-white "><i class="fa fa-facebook-f  fb-hov"></i></a>
+                        <a href="#" class="text-white "><i class="fa fa-twitter tw-hov"></i></a>
+                        <a href="#" class="text-white "><i class="fa fa-instagram in-hov"></i></a>
+                    </div>
+                </div>
+                <h4 class="text-light text-center">Alexa Janathon</h4>
+                <p class="text-light text-center opacity-100">Faculty</p>
+
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="card img-container mb-3">
+                    <img src="~/Images/teacherfour.png" class="img-fluid " />
+                    <div class="overlay justify-content-lg-between">
+                        <a href="#" class="text-white "><i class="fa fa-facebook-f  fb-hov"></i></a>
+                        <a href="#" class="text-white "><i class="fa fa-twitter tw-hov"></i></a>
+                        <a href="#" class="text-white "><i class="fa fa-instagram in-hov"></i></a>
+                    </div>
+                </div>
+                <h4 class="text-light text-center">Janathon Smith</h4>
+                <p class="text-light text-center opacity-100">Faculty</p>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="card img-container mb-3">
+                    <img src="~/Images/teacherthree.png" class="img-fluid " />
+                    <div class="overlay justify-content-lg-between">
+                        <a href="#" class="text-white "><i class="fa fa-facebook-f  fb-hov"></i></a>
+                        <a href="#" class="text-white "><i class="fa fa-twitter tw-hov"></i></a>
+                        <a href="#" class="text-white "><i class="fa fa-instagram in-hov"></i></a>
+                    </div>
+                </div>
+                <h4 class="text-light text-center">AlAlexa MacCalum</h4>
+                <p class="text-light text-center opacity-100">Faculty</p>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="card img-container mb-3">
+                    <img src="~/Images/teachertwo.png" class="img-fluid i" />
+                    <div class="overlay justify-content-lg-between">
+                        <a href="#" class="text-white "><i class="fa fa-facebook-f  fb-hov"></i></a>
+                        <a href="#" class="text-white "><i class="fa fa-twitter tw-hov"></i></a>
+                        <a href="#" class="text-white "><i class="fa fa-instagram in-hov"></i></a>
+                    </div>
+                </div>
+                <h4 class="text-light text-center">Alexa j Watson</h4>
+                <p class="text-light text-center opacity-100">Faculty</p>
+            </div>
+
+            <span class="text-center text-light mt-2">
+                 <a asp-action="About" asp-controller="User" class="link-text text-light">View All Faculty <i class="fa fa-hand-o-right"></i></a>                 
+            </span>
+        </div>
+    </div>
+
+@*Footer Start*@
+
+     <footer class="container-fluid bg-black">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-6 mt-3">
+                    <h4 class="text-light mt-3">Stay Updated</h4>
+                    <div class="mt-4">
+                        <form asp-action="Home" asp-controller="User" method="post">
+                       
+                            <div class="input-group ">
+                                <input asp-for="Email" class = "form-control" placeholder = "Enter E-mail" type = "email">
+                               
+                                <span class="input-group-text bg-primary"><button type="submit" class="btn btn-primary">Subscribe Now</button></span>
+
+                            </div>
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        
+                        </form>
+
+                    </div>
+                </div>
+                  <div class="col-md-1"></div>
+
+                <div class="col-md-5 ">
+                    <h4 class="text-light mt-3">Let’s Get Social</h4>
+
+                    <table class="mt-5" width="50%">
+                        <tr class="text-light">
+                            <td><i class="fa fa-facebook fa-2x fb-hov"></i></td>
+                            <td><i class="fa fa-twitter fa-2x tw-hov"></i></td>
+                            <td><i class="fa fa-google fa-2x go-hov"></i></td>
+                            <td><i class="fa fa-instagram fa-2x in-hov"></i></td>
+                            <td><i class="fa fa-youtube-square fa-2x you-hov"></i></td>
+                        </tr>
+                    </table>
+                </div>
+                <hr class="mt-4 text-light" />
+
+                <p class="text-light opacity-50 mt-1 mb-3 text-center">Copyright ©2022 All rights reserved by simpliLearn</p>
+
+            </div>
+
+        </div>
+   
+    </footer  

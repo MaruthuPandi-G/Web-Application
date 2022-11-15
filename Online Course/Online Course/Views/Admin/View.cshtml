@@ -1,0 +1,57 @@
+﻿@{
+    Layout = null;
+}
+@model CourseDetail
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simpliLearn</title>
+
+  @*Bootstrap 5 compiled Java Script*@
+    <script src="~/bootstrap/js/BootstrapJavaScript.js"></script>
+
+    @*Bootstrap 5 compiled Css*@
+    <link href="~/bootstrap/css/BootstrapStyle.css" rel="stylesheet" />
+
+    @*Fontawesome 4.7.0*@
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" ><link />
+
+  
+    @*My Style Sheet*@
+    <link href="~/css/MyStyle.css" rel="stylesheet" />
+
+   <script src="~/jquery/MyScript.js"></script>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body class="container">
+
+    <div class="row mt-5">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div class="card mt-5 card-shadow">
+                <div class="card-header text-center">
+                     @{string photoPath="~/images/" + (@Model.CourseImage ?? "noimage.jpg");}
+                         <img src=@photoPath class="img-fluid" asp-append-version="true" />
+                </div>
+                                <div class="card-body">                                    
+                                    <h4 class="mt-2 mb-2">@Model.CourseName</h4>
+                                    <p class="mt-2">@Model.CourseDescription</p>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <a asp-action="Home" asp-controller="Admin" class = "text-center" >Back To List</a>                                    
+                                </div>
+                    </div>
+
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+    
+</body>
+</html>

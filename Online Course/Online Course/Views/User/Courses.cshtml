@@ -1,0 +1,91 @@
+﻿@model IEnumerable<CourseDetail>
+
+@*Content Start*@
+
+    <div class="container-fluid ">
+        <div class="row bg-about p-5">
+            <p class="text-center text-white display-4 mb-3 mt-3">All Courses</p>
+        </div>
+    </div>
+
+    <div>
+        <p class="display-6 text-center text-danger mb-5 mt-5">Pick Your Courses!</p>
+    </div>
+
+    <div class="container">
+       
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder = "Find Your Course" id="courseName"  />
+                <span class="input-group-text bg-primary"><button type="submit" class="btn btn-primary" id="btn-Search">Search</button></span>
+            </div>
+       
+    </div>
+
+    <p class="text-black-100 lead mb-3 mt-4 text-center" id="error-msg"></p>
+   
+        <div class="container">
+            <div class="row mt-5" id="card-group">
+                
+                @if (Model != null)
+                {
+                    foreach (var records in Model)
+                    {
+                        <div class="col-sm-6 col-md-4" >
+                            <div class="card mb-5 card-hov  card-shadow">
+                                <div class="card-body"> 
+                                    @{string photoPath="~/images/" + (@records.CourseImage ?? "noimage.jpg");}
+                                    <img src=@photoPath height="64px" width="64px" class="img-fluid mt-2" asp-append-version="true" />
+                                    <h4 class="mt-2 mb-2">@records.CourseName</h4>
+                                    <p class="mt-2">@records.CourseDescription</p>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <a asp-action="Login" asp-controller="User" class = "link-text" >Learn for Free</a>                                    
+                                </div>
+                            </div>
+                         </div>
+                    }
+                }
+           
+        </div>
+        </div>
+
+        @section Scripts{
+
+            <script src="~/js/ScriptForSearch.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script src="~/jquery/jquery.js"></script>
+        }
+
+
+  
+                                    @*Footer Start*@
+
+     <footer class="container-fluid bg-black">
+        <div class="container">
+
+            <div class="row">
+
+              
+
+                <div class="col-md-12 ">
+                    <h4 class="text-light mt-3 text-center">Let’s Get Social</h4>
+
+                    <table class="mt-5 " width="50%" align="center">
+                        <tr class="text-light">
+                            <td><i class="fa fa-facebook fa-2x fb-hov"></i></td>
+                            <td><i class="fa fa-twitter fa-2x tw-hov"></i></td>
+                            <td><i class="fa fa-google fa-2x go-hov"></i></td>
+                            <td><i class="fa fa-instagram fa-2x in-hov"></i></td>
+                            <td><i class="fa fa-youtube-square fa-2x you-hov"></i></td>
+                        </tr>
+                    </table>
+                </div>
+                <hr class="mt-4 text-light" />
+
+                <p class="text-light opacity-50 mt-1 mb-3 text-center">Copyright ©2022 All rights reserved by simpliLearn</p>
+
+            </div>
+
+        </div>
+   
+    </footer>

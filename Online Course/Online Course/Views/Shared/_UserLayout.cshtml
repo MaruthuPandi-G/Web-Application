@@ -1,0 +1,106 @@
+﻿
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlineEdu</title>
+
+    @*Bootstrap 5 compiled Java Script*@
+    <script src="~/bootstrap/js/BootstrapJavaScript.js"></script>
+
+    @*Bootstrap 5 compiled Css*@
+    <link href="~/bootstrap/css/BootstrapStyle.css" rel="stylesheet" />
+
+    @*Fontawesome 4.7.0*@
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" ><link />
+
+  
+    @*My Style Sheet*@
+    <link href="~/css/MyStyle.css" rel="stylesheet" />
+
+   <script src="~/jquery/MyScript
+.js"></script>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   
+ 
+
+       
+
+</head>
+
+
+@*Header Start*@
+<body>
+    
+    <header class="container-fluid ">
+        <div class="text-center mt-3 mb-2 position-sticky">
+            <img src="~/Images/logo.png" class="img-fluid " asp-append-version=true />
+        </div>
+        <nav class="navbar navbar-expand-sm navbar-dark ">
+            <div class="container-fluid">
+
+                <a class="navbar-brand text-black" href="/First/Home"><i class="fa fa-home" aria-hidden="true"></i></a>
+
+
+                <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                    <span class="text-black"> <i class="fa fa-bars" aria-hidden="true"></i></span>
+                </button>
+
+                <div class="collapse navbar-collapse row" id="mynavbar">
+                    <ul class="navbar-nav me-auto ">
+                        <li class="nav-item col-md-2 navitems">
+                            <a class = "nav-link text-black nav-text" asp-action="Home" asp-controller="User">Home</a>                       
+                        </li>
+                        <li class="nav-item col-md-2">
+                            <a class = "nav-link text-black nav-text" asp-action="About" asp-controller="User">About</a>                            
+                        </li>
+                        <li class="nav-item col-md-2">
+                            <a class = "nav-link text-black nav-text" asp-action="Courses" asp-controller="User">Courses</a>                            
+                        </li>
+                        <li class="nav-item col-md-2">
+                            <a class = "nav-link text-black nav-text" asp-action="Blog" asp-controller="User">Blog</a>    
+                        </li>
+                        <li class="nav-item col-md-2">
+                            <a class = "nav-link text-black nav-text" asp-action="Contact" asp-controller="User">Contact</a>    
+                        </li>
+
+                        <li class="dropdown col-md-2">
+
+                            <button type="button" class="btn btn-outline-primary dropdown" data-bs-toggle="dropdown">
+                                <span class="text-black fw-bold"> Account</span>&nbsp;&nbsp;<i class="fa fa-user-circle" aria-hidden="true"></i>
+                            </button>
+                            <ul class="dropdown-menu bg-primary bg-primary bg-opacity-75">
+                                <li><a class = "dropdown-item text-black nav-text" asp-action="Register" asp-controller="User">Register</a></li> 
+                                <li><a class = "dropdown-item text-black nav-text" asp-action="Login" asp-controller="User">Login</a></li> 
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+    </header>
+    <br />
+
+    
+       <div>
+           @RenderBody()
+       </div>
+      
+    @if (IsSectionDefined("Scripts"))
+    {
+        @RenderSection("Scripts",required:true)
+    }
+
+    
+
+   
+              
+</body>
+
+</html>

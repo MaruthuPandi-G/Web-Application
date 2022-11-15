@@ -1,0 +1,128 @@
+﻿@model BlogsModel
+
+  
+    @*Content Start*@
+
+    <div class="container-fluid ">
+        <div class="row bg-about p-5">
+            <p class="text-center text-white display-4 mb-3 mt-3">Blogs</p>
+        </div>
+    </div>
+
+    
+
+     <div class="container">
+            <div class="row mt-5" id="card-group">
+                
+                @if (Model != null)
+                {
+                    foreach (var records in Model.BlogsDetails)
+                    {
+                        <div class="col-sm-6">
+                            <div class="card mb-5 card-shadow ">
+                                <div class="card-body bg-primary bg-gradient bg-opacity-25"> 
+                                    @{string photoPath="/images/" + (@records.BloggerImage ?? "noimage.jpg");}
+                                   
+                                   <div class="row">
+                                       <div class="col-12 col-sm-12 col-md-12">
+                                           <h4 class="text-primary">@records.BlogName</h4>
+                                          <div class="row">
+                                              <div class="col-md-9">
+                                                   <p style="font-size:17px;">@records.BlogDetails</p>
+                                                    <p class="text-success" style="font-size:11px;">@records.BlogDate.ToString().Substring(0,10)</p>
+                                              </div>
+                                             <div class="col-md-3">
+                                                 <img src=@photoPath class="img-fluid rounded mx-auto d-block mt-1" height="24px" weight="24px" asp-append-version="true">
+                                             <p class="text-center text-danger mt-2 fw-bold lead">@records.BloggerName</p>
+                                             </div>
+                                          </div>
+                                                                               
+                                                                                  
+                                           
+                                       </div>
+                                      
+
+                                   </div>
+                                  
+                                </div>
+                               
+                                   
+                                    
+                               
+                            </div>
+                         </div>
+                    }
+                }
+           </div>
+        </div>
+      
+
+
+        <p class="text-center mt-3"><button class="button-71" role="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Add Blog</button></p>
+
+ <!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title " id="staticBackdropLabel">Your Blog Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+       <form enctype="multipart/form-data" asp-action="Blog" asp-controller="User" method="post">
+
+           <input type="text" asp-for="BlogDetail.BloggerName" class="form-control form-control-md" placeholder="Enter Name" required/>
+           <br />
+
+           <input type="file" asp-for="BlogDetail.BloggerImage" class="form-control form-control-md" placeholder="Your Image" required/>
+            <br />
+
+           <input type="text" asp-for="BlogDetail.BlogName" class="form-control form-control-md" placeholder="Enter BlogName" required/>
+            <br />
+
+           <textarea asp-for="BlogDetail.BlogDetails" class="form-control form-control-md" placeholder="Blog Details" required></textarea>
+           
+
+           <p class="text-center"> <button type="submit" class="btn btn-outline-primary  mt-3 mb-3">Add</button></p>
+       </form>
+      </div>
+     
+    </div>
+  </div>
+</div>                        
+
+
+
+
+
+  @*Footer Start*@
+
+     <footer class="container-fluid bg-black">
+        <div class="container">
+
+            <div class="row">
+                
+
+                <div class="col-md-12 ">
+                    <h4 class="text-light mt-3 text-center">Let’s Get Social</h4>
+
+                    <table class="mt-5" width="50%" align="center">
+                        <tr class="text-light">
+                            <td><i class="fa fa-facebook fa-2x fb-hov"></i></td>
+                            <td><i class="fa fa-twitter fa-2x tw-hov"></i></td>
+                            <td><i class="fa fa-google fa-2x go-hov"></i></td>
+                            <td><i class="fa fa-instagram fa-2x in-hov"></i></td>
+                            <td><i class="fa fa-youtube-square fa-2x you-hov"></i></td>
+                        </tr>
+                    </table>
+                </div>
+                <hr class="mt-4 text-light" />
+
+                <p class="text-light opacity-50 mt-1 mb-3 text-center">Copyright ©2022 All rights reserved by simpliLearn</p>
+
+            </div>
+
+        </div>
+   
+    </footer>

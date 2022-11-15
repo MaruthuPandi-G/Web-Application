@@ -1,0 +1,106 @@
+﻿
+@{
+    Layout = null;
+}
+@model CheckboxModel
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simpliLearn</title>
+
+  @*Bootstrap 5 compiled Java Script*@
+    <script src="~/bootstrap/js/BootstrapJavaScript.js"></script>
+
+    @*Bootstrap 5 compiled Css*@
+    <link href="~/bootstrap/css/BootstrapStyle.css" rel="stylesheet" />
+
+    @*Fontawesome 4.7.0*@
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" ><link />
+
+  
+    @*My Style Sheet*@
+    <link href="~/css/MyStyle.css" rel="stylesheet" />
+
+   <script src="~/jquery/MyScript.js"></script>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    
+
+    <header>
+        <div class="container">
+            <div class="row mt-2">
+                
+
+                <div class="col-12 col-sm-3 col-md-6 mb-3 text-end"><img src="~/Images/logo.png" class="img-fluid " /></div>
+
+               
+
+                <div class="col-12 col-sm-5 col-md-5">
+               
+                       
+                                <p class="text-success mt-2 text-end text-font fw-normal">@TempData["User Name"] <i class="fa fa-user-circle" aria-hidden="true"></i></p>
+                           
+                 
+                </div>
+                <div class="col-12 col-sm-4 col-md-1 mt-1 mb-1">
+                    <p class="text-end">
+                        <a asp-action="Logout" asp-controller="User" class = " btn btn-outline-danger fa fa-sign-out text-end">Logout</a>
+                     </p>   
+                </div>
+
+            </div>
+        </div>
+        
+    </header>
+    <div class="container-fluid ">
+        <div class="row bg-about p-5">
+            <p class="text-center text-white display-5 mb-3 mt-3"><q>Never stop learning, because life never stops teaching.</q></p>
+        </div>
+
+
+      <div class="card mt-5">
+          <div class="card-header bg-primary bg-gradient">
+              <p class="text-center display-3 text-white">Available Courses!</p>
+          </div>
+
+          
+          <div class="card-body mt-4">
+              <form asp-action="UserPage" asp-controller="User" method="post">
+                   
+                       <div class="row">
+                             @if (Model != null)
+                    {
+                        @foreach(var courseNames in Model.courseDetails)
+                        {
+                            
+                                <div class="col-md-4 mb-3">
+                                    <input asp-for="IsCheked" type="checkbox" class="form-check-input"/> 
+                                    <label class="form-check-reverse">@courseNames.CourseName</label>
+                                   <input type="hidden" asp-for="CourseId" value=@courseNames.CourseId />
+                                </div>
+                            
+                        }
+                    }
+                        <input type="hidden" asp-for="UserId" value=@ViewData["UserId"]  />
+                      </div>    
+                      
+                    <p class="text-center"><button class="btn btn-outline-primary mt-3">Submit</button></p>
+                </form>
+          </div>
+          <div class="card-footer mb-2">
+              <p class="lead text-center text-success fw-bold mt-2 mb-4">@ViewData["Message"]</p>
+          </div>
+      </div>
+
+
+
+    </div>
+</body>
+</html>
